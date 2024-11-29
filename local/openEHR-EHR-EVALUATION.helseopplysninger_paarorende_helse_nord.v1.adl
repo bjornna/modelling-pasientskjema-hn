@@ -28,7 +28,7 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"08ee72d9aa7fd1f654399b8d05f6b779">
+		["MD5-CAM-1.0.1"] = <"080afedd3d63328d48d63376aaa45fa4">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
@@ -38,6 +38,10 @@ definition
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
 					allow_archetype CLUSTER[at0030] occurrences matches {0..*} matches {    -- Pårørende
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0032] occurrences matches {0..*} matches {    -- Fødselsdato
 						include
 							archetype_id/value matches {/.*/}
 					}
@@ -145,6 +149,10 @@ ontology
 				>
 				["at0030"] = <
 					text = <"Pårørende">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Fødselsdato">
 					description = <"">
 				>
 			>
