@@ -28,7 +28,7 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6de0128f68234a985280ce60b466bb73">
+		["MD5-CAM-1.0.1"] = <"c72879580a9cd3db84dee8d6bfa57f27">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
@@ -49,7 +49,7 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0016] occurrences matches {1..*} matches {    -- Relasjon
+					ELEMENT[at0016] occurrences matches {0..*} matches {    -- Relasjon
 						value matches {
 							DV_CODED_TEXT matches {
 								defining_code matches {
