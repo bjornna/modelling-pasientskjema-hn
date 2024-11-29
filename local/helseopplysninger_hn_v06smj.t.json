@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "c013518eee7932f36e0eb9b73a179a86",
+      "MD5-CAM-1.0.1" : "69d18795e35bbc373ee1ed59a9f20ff2",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
-      "sem_ver" : "14.0.0",
+      "sem_ver" : "15.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1817,7 +1817,7 @@
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
           "occurrences" : "0..1",
-          "nodeId" : "at0.5",
+          "nodeId" : "at0.7",
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-helseopplysninger_paarorende_helse_nord-001.v1",
@@ -6059,7 +6059,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "51e999c6-37f3-43e5-90f8-0733c64bd491",
+    "uid" : "35af35ce-eec7-4d12-8365-9f36ce279243",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -6068,7 +6068,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "893fea17df0600ad10fd53ab0408cec8"
+        "PARENT:MD5-CAM-1.0.1" : "080afedd3d63328d48d63376aaa45fa4"
       },
       "details" : { }
     },
@@ -6103,6 +6103,31 @@
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
+              "nodeId" : "at0015.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_DATE",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "value",
+                    "children" : [ {
+                      "@type" : "C_DATE",
+                      "rmTypeName" : "DATE_TIME",
+                      "patternedConstraint" : "yyyy-mm-dd",
+                      "constraint" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
               "nodeId" : "at0016.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -6129,13 +6154,6 @@
               } ],
               "attributeTuples" : [ ]
             }, {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..0",
-              "nodeId" : "at0031.1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            }, {
               "@type" : "C_ARCHETYPE_ROOT",
               "rmTypeName" : "CLUSTER",
               "occurrences" : "0..1",
@@ -6156,12 +6174,6 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "nb" : {
-          "at0014.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0014.1",
-            "text" : "Navn på pårørende",
-            "description" : ""
-          },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
@@ -6195,7 +6207,7 @@
     "translations" : [ ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "3f4bbf2a-8b42-44bc-9093-84a4302d3ffd",
+    "uid" : "9f3e1c72-8e03-41af-a77a-ef1b98520827",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -6236,61 +6248,14 @@
             "rmAttributeName" : "value",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
+              "rmTypeName" : "DV_TEXT",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "defining_code",
+                "rmAttributeName" : "value",
                 "children" : [ {
-                  "@type" : "C_TERMINOLOGY_CODE",
-                  "rmTypeName" : "TERMINOLOGY_CODE",
-                  "occurrences" : "0..1",
-                  "terminologyId" : {
-                    "value" : "local_terms"
-                  },
-                  "constraint" : [ ],
-                  "selectedTerminologies" : [ "local_terms" ],
-                  "includedExternalTerminologyCodes" : [ {
-                    "terminologyId" : "local_terms",
-                    "code" : "1",
-                    "value" : "Ektefelle/samboer/partner"
-                  }, {
-                    "terminologyId" : "local_terms",
-                    "code" : "2",
-                    "value" : "Forelder"
-                  }, {
-                    "terminologyId" : "local_terms",
-                    "code" : "3",
-                    "value" : "Fosterforelder"
-                  }, {
-                    "terminologyId" : "local_terms",
-                    "code" : "4",
-                    "value" : "Voksne barn"
-                  }, {
-                    "terminologyId" : "local_terms",
-                    "code" : "5",
-                    "value" : "Søsken"
-                  }, {
-                    "terminologyId" : "local_terms",
-                    "code" : "6",
-                    "value" : "Voksne barnebarn"
-                  }, {
-                    "terminologyId" : "local_terms",
-                    "code" : "7",
-                    "value" : "Besteforelder"
-                  }, {
-                    "terminologyId" : "local_terms",
-                    "code" : "8",
-                    "value" : "Øvrig familie"
-                  }, {
-                    "terminologyId" : "local_terms",
-                    "code" : "9",
-                    "value" : "Venn"
-                  }, {
-                    "terminologyId" : "local_terms",
-                    "code" : "10",
-                    "value" : "Verge"
-                  } ]
+                  "@type" : "C_STRING",
+                  "rmTypeName" : "STRING",
+                  "constraint" : [ "Ektefelle/samboer/partner", "Forelder", "Fosterforelder", "Voksne barn", "Søsken", "Voksne barnebarn", "Besteforelder", "Øvrig familie", "Venn", "Verge" ]
                 } ]
               } ],
               "attributeTuples" : [ ]
@@ -6326,17 +6291,14 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_CODED_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0010.1",
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
       } ],
