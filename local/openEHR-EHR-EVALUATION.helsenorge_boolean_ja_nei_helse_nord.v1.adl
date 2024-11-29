@@ -1,0 +1,75 @@
+archetype (adl_version=1.4; uid=6bbd299a-8078-4837-98d8-a055294b7470)
+	openEHR-EHR-EVALUATION.helsenorge_boolean_ja_nei_helse_nord.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2024-01-05">
+		["name"] = <"Bjørn Næss">
+		["organisation"] = <"DIPS AS">
+		["email"] = <"bna@dips.no">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"Utviklet for å støtte felter i Helse Nord sitt helseopplysninger skjema. Formålet med modelleringen er å være spesifikk i arketypen for å forenkle skjemautviklingen og eventuelle mappinger. 
+Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare ville skapt ekstra abstraksjoner og mindre fleksibilitet. ">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"541b772f9aceeca687e7df51134447ce">
+		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
+	>
+
+definition
+	EVALUATION[at0000] matches {    -- helsenorge_boolean_ja_nei_helse_nord
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0157] occurrences matches {0..1} matches {    -- Er det nødvendig med annen type kommunikasjonsstøtte?
+						value matches {
+							DV_BOOLEAN matches {*}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0013] matches {*}    -- Item tree
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"helsenorge_boolean_ja_nei_helse_nord">
+					description = <"Helseopplysninger slik det er definert for Helse Nord">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0157"] = <
+					text = <"Er det nødvendig med annen type kommunikasjonsstøtte?">
+					description = <"">
+				>
+			>
+		>
+	>
