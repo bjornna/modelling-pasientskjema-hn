@@ -28,15 +28,23 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"27a42943d3b5993aba1088bbb6dcbf12">
+		["MD5-CAM-1.0.1"] = <"f1586f7a8a01dd305ee3373ca4edb4b3">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
 definition
-	EVALUATION[at0000] matches {    -- helseopplysninger_helse_nord
+	EVALUATION[at0000] matches {    -- helseopplysninger_helse_nord_smj
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0153] occurrences matches {0..*} matches {    -- Tolk
+						include
+							archetype_id/value matches {/.*/}
+					}
+					allow_archetype CLUSTER[at0154] occurrences matches {0..*} matches {    -- språk
+						include
+							archetype_id/value matches {/.*/}
+					}
 					CLUSTER[at0002] occurrences matches {0..1} matches {    -- Behov for tolk
 						items cardinality matches {1..*; unordered} matches {
 							ELEMENT[at0003] occurrences matches {0..1} matches {    -- Er det nødvendig med tolk?
@@ -553,6 +561,14 @@ definition
 					}
 					CLUSTER[at0140] occurrences matches {0..1} matches {    -- Høyde og vekt
 						items cardinality matches {1..*; unordered} matches {
+							allow_archetype CLUSTER[at0155] occurrences matches {0..*} matches {    -- høyde
+								include
+									archetype_id/value matches {/.*/}
+							}
+							allow_archetype CLUSTER[at0156] occurrences matches {0..*} matches {    -- vekt
+								include
+									archetype_id/value matches {/.*/}
+							}
 							ELEMENT[at0141] occurrences matches {0..1} matches {    -- Høyde
 								value matches {
 									C_DV_QUANTITY <
@@ -592,7 +608,7 @@ ontology
 		["nb"] = <
 			items = <
 				["at0000"] = <
-					text = <"helseopplysninger_helse_nord">
+					text = <"helseopplysninger_helse_nord_smj">
 					description = <"Helseopplysninger slik det er definert for Helse Nord">
 				>
 				["at0001"] = <
@@ -1181,6 +1197,22 @@ ontology
 				>
 				["at0152"] = <
 					text = <"Nei">
+					description = <"">
+				>
+				["at0153"] = <
+					text = <"Tolk">
+					description = <"">
+				>
+				["at0154"] = <
+					text = <"språk">
+					description = <"">
+				>
+				["at0155"] = <
+					text = <"høyde">
+					description = <"">
+				>
+				["at0156"] = <
+					text = <"vekt">
 					description = <"">
 				>
 			>
