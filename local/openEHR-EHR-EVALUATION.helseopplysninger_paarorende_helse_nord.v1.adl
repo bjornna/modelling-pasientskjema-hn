@@ -28,7 +28,7 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"c72879580a9cd3db84dee8d6bfa57f27">
+		["MD5-CAM-1.0.1"] = <"893fea17df0600ad10fd53ab0408cec8">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
@@ -37,6 +37,10 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0030] occurrences matches {0..*} matches {    -- Pårørende
+						include
+							archetype_id/value matches {/.*/}
+					}
 					ELEMENT[at0014] occurrences matches {0..*} matches {    -- Navn på pårørende
 						value matches {
 							DV_TEXT matches {*}
@@ -67,6 +71,7 @@ definition
 							}
 						}
 					}
+					CLUSTER[at0031] occurrences matches {0..1} matches {*}    -- CLUSTER
 				}
 			}
 		}
@@ -137,6 +142,14 @@ ontology
 				>
 				["at0029"] = <
 					text = <"Venn">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Pårørende">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"CLUSTER">
 					description = <"">
 				>
 			>
