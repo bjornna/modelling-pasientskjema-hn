@@ -28,7 +28,7 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"893fea17df0600ad10fd53ab0408cec8">
+		["MD5-CAM-1.0.1"] = <"08ee72d9aa7fd1f654399b8d05f6b779">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
@@ -71,7 +71,6 @@ definition
 							}
 						}
 					}
-					CLUSTER[at0031] occurrences matches {0..1} matches {*}    -- CLUSTER
 				}
 			}
 		}
@@ -146,10 +145,6 @@ ontology
 				>
 				["at0030"] = <
 					text = <"Pårørende">
-					description = <"">
-				>
-				["at0031"] = <
-					text = <"CLUSTER">
 					description = <"">
 				>
 			>
