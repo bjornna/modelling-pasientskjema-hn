@@ -28,14 +28,47 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"67fd233976e33a35493e62d6a59d22a6">
+		["MD5-CAM-1.0.1"] = <"6de0128f68234a985280ce60b466bb73">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
 definition
 	EVALUATION[at0000] matches {    -- helseopplysninger_paarorende_helse_nord
 		data matches {
-			ITEM_TREE[at0001] matches {*}    -- Item tree
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0014] occurrences matches {0..*} matches {    -- Navn på pårørende
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0015] occurrences matches {0..1} matches {    -- Fødselsdato
+						value matches {
+							DV_DATE matches {
+								value matches {yyyy-mm-dd}
+							}
+						}
+					}
+					ELEMENT[at0016] occurrences matches {1..*} matches {    -- Relasjon
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0017,    -- Ektefelle/samboer/partner
+									at0018,    -- Forelder
+									at0027,    -- Fosterforelder
+									at0020,    -- Barn
+									at0023,    -- Barnebarn
+									at0024,    -- Besteforelder
+									at0029,    -- Venn
+									at0025,    -- Øvrig familie
+									at0026]    -- Verge
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 		protocol matches {
 			ITEM_TREE[at0013] matches {*}    -- Item tree
@@ -57,6 +90,54 @@ ontology
 				["at0013"] = <
 					text = <"Item tree">
 					description = <"@ internal @">
+				>
+				["at0014"] = <
+					text = <"Navn på pårørende">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Fødselsdato">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Relasjon">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Ektefelle/samboer/partner">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Forelder">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Barn">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Barnebarn">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Besteforelder">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Øvrig familie">
+					description = <"Tanter, onkler, nieser, nevøer etc.">
+				>
+				["at0026"] = <
+					text = <"Verge">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Fosterforelder">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Venn">
+					description = <"">
 				>
 			>
 		>
