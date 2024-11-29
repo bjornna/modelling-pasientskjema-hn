@@ -28,7 +28,7 @@ Det kunne vært benyttet kartleggingsarketyper, men vurderingen er at det bare v
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"541b772f9aceeca687e7df51134447ce">
+		["MD5-CAM-1.0.1"] = <"470a489ed793e67a8617e7598b322233">
 		["build_uid"] = <"d0a4f823-cf96-3c22-a04c-bcd073856a16">
 	>
 
@@ -37,7 +37,7 @@ definition
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Item tree
 				items cardinality matches {0..*; unordered} matches {
-					ELEMENT[at0157] occurrences matches {0..1} matches {    -- Er det nødvendig med annen type kommunikasjonsstøtte?
+					ELEMENT[at0157] occurrences matches {0..1} matches {    -- Spørsmål skrives her
 						value matches {
 							DV_BOOLEAN matches {*}
 						}
@@ -67,7 +67,7 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0157"] = <
-					text = <"Er det nødvendig med annen type kommunikasjonsstøtte?">
+					text = <"Spørsmål skrives her">
 					description = <"">
 				>
 			>
