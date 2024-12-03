@@ -74,6 +74,7 @@
         },
         "purpose" : "Utviklet som en rask prototype for å støtte helseopplysninger skjema som brukes i Helse Nord. ",
         "keywords" : [ "helseopplysninger, helse norge" ],
+        "use" : "Pasientregistrerte data",
         "copyright" : "DIPS AS",
         "originalResourceUri" : { },
         "otherDetails" : { }
