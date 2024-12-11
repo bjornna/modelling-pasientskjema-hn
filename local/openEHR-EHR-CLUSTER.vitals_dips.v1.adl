@@ -1,0 +1,116 @@
+archetype (adl_version=1.4; uid=5d85f24d-bb73-449f-b4ed-d7ea3fdb0d49)
+	openEHR-EHR-CLUSTER.vitals_dips.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2024-04-20">
+		["name"] = <"Bjørn Næss">
+		["organisation"] = <"DIPS AS">
+		["email"] = <"bna@dips.no">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"dd3ab341ceabb75669bdca65b3438a64">
+		["build_uid"] = <"b509bafa-9afc-3a62-a6dd-6eee7c0950ad">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Vitale parametre
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Høyde
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::122]>
+						list = <
+							["1"] = <
+								units = <"cm">
+								precision = <|0|>
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Vekt
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::124]>
+						list = <
+							["1"] = <
+								units = <"kg">
+								precision = <|1|>
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Temperatur
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::127]>
+						list = <
+							["1"] = <
+								units = <"Cel">
+							>
+						>
+					>
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- BMI
+				value matches {
+					C_DV_QUANTITY <
+						property = <[openehr::349]>
+						list = <
+							["1"] = <
+								units = <"kg/m2">
+								precision = <|1|>
+							>
+						>
+					>
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Vitale parametre">
+					description = <"vitals">
+				>
+				["at0001"] = <
+					text = <"Høyde">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Vekt">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Temperatur">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"BMI">
+					description = <"">
+				>
+			>
+		>
+	>
