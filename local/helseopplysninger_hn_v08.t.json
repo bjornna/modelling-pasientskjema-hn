@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "31cfe23b75f7e9b26f189f88074eab61",
+      "MD5-CAM-1.0.1" : "95e941b44de339324577e506a3bdacc3",
       "PARENT:MD5-CAM-1.0.1" : "BBA2C8A4A40921B9CD67FB733F13FBBF",
-      "sem_ver" : "25.0.0",
+      "sem_ver" : "26.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -9805,6 +9805,7 @@
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
                       "nodeId" : "at0026.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -9883,6 +9884,7 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..1",
                           "nodeId" : "at0002.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -9922,12 +9924,20 @@
                             } ]
                           } ],
                           "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0025.1",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
                         } ]
                       } ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
                       "nodeId" : "at0026.2",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -9956,20 +9966,20 @@
                                   "rmTypeName" : "TERMINOLOGY_CODE",
                                   "occurrences" : "0..1",
                                   "terminologyId" : {
-                                    "value" : "local_terms"
+                                    "value" : "no.hn.pas.substance_use"
                                   },
                                   "constraint" : [ ],
-                                  "selectedTerminologies" : [ "local_terms" ],
+                                  "selectedTerminologies" : [ "no.hn.pas.substance_use" ],
                                   "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "local_terms",
+                                    "terminologyId" : "no.hn.pas.substance_use",
                                     "code" : "ja",
                                     "value" : "Ja"
                                   }, {
-                                    "terminologyId" : "local_terms",
+                                    "terminologyId" : "no.hn.pas.substance_use",
                                     "code" : "nei",
                                     "value" : "Nei"
                                   }, {
-                                    "terminologyId" : "local_terms",
+                                    "terminologyId" : "no.hn.pas.substance_use",
                                     "code" : "sluttet",
                                     "value" : "Har sluttet?"
                                   } ]
@@ -10006,6 +10016,7 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..1",
                           "nodeId" : "at0002.2",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -10045,6 +10056,274 @@
                             } ]
                           } ],
                           "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0025.2",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0026.3",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0021.3",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0024.3",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "no.hn.pas.substance_use"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "no.hn.pas.substance_use" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "no.hn.pas.substance_use",
+                                    "code" : "ja",
+                                    "value" : "Ja"
+                                  }, {
+                                    "terminologyId" : "no.hn.pas.substance_use",
+                                    "code" : "nei",
+                                    "value" : "Nei"
+                                  }, {
+                                    "terminologyId" : "no.hn.pas.substance_use",
+                                    "code" : "sluttet",
+                                    "value" : "Har sluttet?"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0003.3",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DATE_TIME",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_DATE_TIME",
+                                  "rmTypeName" : "DATE_TIME",
+                                  "patternedConstraint" : "yyyy-XX-XXTXX:XX:XX",
+                                  "constraint" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..1",
+                          "nodeId" : "at0002.3",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "no.hn.pas.substance_use_frequency"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "no.hn.pas.substance_use_frequency" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "no.hn.pas.substance_use_frequency",
+                                    "code" : "1",
+                                    "value" : "Daglig"
+                                  }, {
+                                    "terminologyId" : "no.hn.pas.substance_use_frequency",
+                                    "code" : "2",
+                                    "value" : "Ukentlig"
+                                  }, {
+                                    "terminologyId" : "no.hn.pas.substance_use_frequency",
+                                    "code" : "3",
+                                    "value" : "Sjeldent"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0025.3",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "CLUSTER",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0026.4",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "items",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0021.4",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "nodeId" : "at0024.4",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "no.hn.pas.substance_use"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "no.hn.pas.substance_use" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "no.hn.pas.substance_use",
+                                    "code" : "ja",
+                                    "value" : "Ja"
+                                  }, {
+                                    "terminologyId" : "no.hn.pas.substance_use",
+                                    "code" : "nei",
+                                    "value" : "Nei"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0003.4",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_DATE_TIME",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "value",
+                                "children" : [ {
+                                  "@type" : "C_DATE_TIME",
+                                  "rmTypeName" : "DATE_TIME",
+                                  "patternedConstraint" : "yyyy-XX-XXTXX:XX:XX",
+                                  "constraint" : [ ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0002.4",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "value",
+                            "children" : [ {
+                              "@type" : "C_COMPLEX_OBJECT",
+                              "rmTypeName" : "DV_CODED_TEXT",
+                              "occurrences" : "1..1",
+                              "attributes" : [ {
+                                "@type" : "C_ATTRIBUTE",
+                                "rmAttributeName" : "defining_code",
+                                "children" : [ {
+                                  "@type" : "C_TERMINOLOGY_CODE",
+                                  "rmTypeName" : "TERMINOLOGY_CODE",
+                                  "occurrences" : "0..1",
+                                  "terminologyId" : {
+                                    "value" : "no.hn.pas.substance_use_frequency"
+                                  },
+                                  "constraint" : [ ],
+                                  "selectedTerminologies" : [ "no.hn.pas.substance_use_frequency" ],
+                                  "includedExternalTerminologyCodes" : [ {
+                                    "terminologyId" : "no.hn.pas.substance_use_frequency",
+                                    "code" : "1",
+                                    "value" : "Daglig"
+                                  }, {
+                                    "terminologyId" : "no.hn.pas.substance_use_frequency",
+                                    "code" : "2",
+                                    "value" : "Ukentlig"
+                                  }, {
+                                    "terminologyId" : "no.hn.pas.substance_use_frequency",
+                                    "code" : "3",
+                                    "value" : "Sjeldent"
+                                  } ]
+                                } ]
+                              } ],
+                              "attributeTuples" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        }, {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "ELEMENT",
+                          "occurrences" : "0..0",
+                          "nodeId" : "at0025.4",
+                          "attributes" : [ ],
+                          "attributeTuples" : [ ]
                         } ]
                       } ],
                       "attributeTuples" : [ ]
@@ -10070,6 +10349,20 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0026.1",
             "text" : "Specific substance (2)",
+            "description" : "Details about a specified substance or class/grouping of substances relevant for the screening purpose.",
+            "comment" : "Use a separate instance of this CLUSTER to record specific details about each substance or class/grouping."
+          },
+          "at0026.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.1",
+            "text" : "Specific substance (3)",
+            "description" : "Details about a specified substance or class/grouping of substances relevant for the screening purpose.",
+            "comment" : "Use a separate instance of this CLUSTER to record specific details about each substance or class/grouping."
+          },
+          "at0026.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.1",
+            "text" : "Specific substance (4)",
             "description" : "Details about a specified substance or class/grouping of substances relevant for the screening purpose.",
             "comment" : "Use a separate instance of this CLUSTER to record specific details about each substance or class/grouping."
           }
@@ -10144,6 +10437,69 @@
             "text" : "Hvor ofte bruker du snus?",
             "description" : "Tidsangivelse for bruken av substansen eller gruppen av substanser.",
             "comment" : "Dataelementet \"Tidsangivelse\" er med hensikt løst modellert for å støtte ulike måter å angi tidsangivelser for bruken av substansen eller gruppen av substanser i et spørreskjema. Den konkrete semantikken defineres i templatet. For eksempel: den faktiske datoen og/eller tidspunktet; individets alder på tidspunktet for bruken av substansen eller gruppen av substanser; eller hvor lenge siden det/de ble brukt. Kan være en deldato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME."
+          },
+          "at0026.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.3",
+            "text" : "Alkohol",
+            "description" : "Detaljer om en spesifikk substans eller gruppe av substanser som er innenfor kartleggingsformålet.",
+            "comment" : "Bruk separate instanser av dette CLUSTERet for å skille mellom spesifikke substans eller grupper av substanser."
+          },
+          "at0021.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021.3",
+            "text" : "Alkohol",
+            "description" : "Navnet på substansen eller gruppen av substanser.",
+            "comment" : "Koding av \"Substansnavn\" med en terminologi foretrekkes der det er mulig. \r\nFor eksempel: \"tobakk\"; \"sigaretter\"; \"alkohol\"; \"enhver substans utenom tobakk eller alkohol\", \"prestasjonsfremmende medikamenter\"; \"heroin\"; \"cannabinoider\"; \"opiater\" eller \"CNS-stimulerende midler\"."
+          },
+          "at0024.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024.3",
+            "text" : "Drikker du alkohol?",
+            "description" : "Er den spesifikke substansen eller gruppen av substanser noen gang brukt?",
+            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN. Eksempel på et alternativt verdisett ved å benytte datatypen DV_TEXT kan være: Nåværende bruker, Aldri brukt, Tidligere bruker, Ukjent."
+          },
+          "at0003.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.1",
+            "text" : "Har sluttet",
+            "description" : "Skriv årstall",
+            "comment" : "Kan være en deldato, for eksempel kun årstall."
+          },
+          "at0002.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002.3",
+            "text" : "Hvor ofte drikker du alkohol?",
+            "description" : "Tidsangivelse for bruken av substansen eller gruppen av substanser.",
+            "comment" : "Dataelementet \"Tidsangivelse\" er med hensikt løst modellert for å støtte ulike måter å angi tidsangivelser for bruken av substansen eller gruppen av substanser i et spørreskjema. Den konkrete semantikken defineres i templatet. For eksempel: den faktiske datoen og/eller tidspunktet; individets alder på tidspunktet for bruken av substansen eller gruppen av substanser; eller hvor lenge siden det/de ble brukt. Kan være en deldato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME."
+          },
+          "at0026.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.4",
+            "text" : "Rusmidler",
+            "description" : "Detaljer om en spesifikk substans eller gruppe av substanser som er innenfor kartleggingsformålet.",
+            "comment" : "Bruk separate instanser av dette CLUSTERet for å skille mellom spesifikke substans eller grupper av substanser."
+          },
+          "at0021.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0021.4",
+            "text" : "Rusmidler",
+            "description" : "Navnet på substansen eller gruppen av substanser.",
+            "comment" : "Koding av \"Substansnavn\" med en terminologi foretrekkes der det er mulig. \r\nFor eksempel: \"tobakk\"; \"sigaretter\"; \"alkohol\"; \"enhver substans utenom tobakk eller alkohol\", \"prestasjonsfremmende medikamenter\"; \"heroin\"; \"cannabinoider\"; \"opiater\" eller \"CNS-stimulerende midler\"."
+          },
+          "at0024.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0024.4",
+            "text" : "Bruker du andre rusmidler?",
+            "description" : "Vi spør om dette fordi det kan påvirke hvordan du reagerer på bedøvelse, smertestillende og andre medisiner. Sykehuset har ikke meldeplikt til politiet om bruk av ulovlige rusmidler.",
+            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN. Eksempel på et alternativt verdisett ved å benytte datatypen DV_TEXT kan være: Nåværende bruker, Aldri brukt, Tidligere bruker, Ukjent."
+          },
+          "at0003.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003.4",
+            "text" : "Sist brukt",
+            "description" : "Skriv årstall",
+            "comment" : "Kan være en deldato, for eksempel kun årstall."
           }
         },
         "de" : {
@@ -10153,6 +10509,20 @@
             "text" : "Spezifische Substanz (2)",
             "description" : "Details zu einer spezifischen Substanz oder Substanzgruppe, die für Screening-Zwecke relevant sind.",
             "comment" : "*Use a separate instance of this CLUSTER to record specific details about each substance or grouping. (en)"
+          },
+          "at0026.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.1",
+            "text" : "Spezifische Substanz (3)",
+            "description" : "Details zu einer spezifischen Substanz oder Substanzgruppe, die für Screening-Zwecke relevant sind.",
+            "comment" : "*Use a separate instance of this CLUSTER to record specific details about each substance or grouping. (en)"
+          },
+          "at0026.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.1",
+            "text" : "Spezifische Substanz (4)",
+            "description" : "Details zu einer spezifischen Substanz oder Substanzgruppe, die für Screening-Zwecke relevant sind.",
+            "comment" : "*Use a separate instance of this CLUSTER to record specific details about each substance or grouping. (en)"
           }
         },
         "nl" : {
@@ -10160,6 +10530,20 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0026.1",
             "text" : "*Specific substance (en) (2)",
+            "description" : "*Details about a specified substance or grouping of substances relevant for the screening purpose. (en)",
+            "comment" : "*Use a separate instance of this CLUSTER to record specific details about each substance or grouping. (en)"
+          },
+          "at0026.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.1",
+            "text" : "*Specific substance (en) (3)",
+            "description" : "*Details about a specified substance or grouping of substances relevant for the screening purpose. (en)",
+            "comment" : "*Use a separate instance of this CLUSTER to record specific details about each substance or grouping. (en)"
+          },
+          "at0026.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.1",
+            "text" : "*Specific substance (en) (4)",
             "description" : "*Details about a specified substance or grouping of substances relevant for the screening purpose. (en)",
             "comment" : "*Use a separate instance of this CLUSTER to record specific details about each substance or grouping. (en)"
           }
