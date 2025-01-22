@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"151dea9a0f1425666561b06800412312">
+		["MD5-CAM-1.0.1"] = <"fd9c78bed60249b86a7ca4ea8ce1c516">
 		["build_uid"] = <"f7e4871e-fab2-36c8-8e52-51d674659bd7">
 	>
 
@@ -70,6 +70,128 @@ definition
 				}
 			}
 			ELEMENT[at0012] occurrences matches {0..1} matches {    -- Hva slags bedøvelse og hva slags reaksjon?
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0013] occurrences matches {0..1} matches {    -- Har du hatt vekttap de siste ukene?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0014,    -- Ja
+							at0015,    -- Nei
+							at0016]    -- Usikker
+						}
+					}
+				}
+			}
+			ELEMENT[at0017] occurrences matches {0..1} matches {    -- Har du spist mindre enn normalt de siste ukene?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0018,    -- Ja
+							at0019]    -- Nei
+						}
+					}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Beskriv vekttap og eventuelt redusert matinntak:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0021] occurrences matches {0..1} matches {    -- Har du lett for å bli kvalm eller reisesyk?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0022,    -- Ja
+							at0023,    -- Nei
+							at0024]    -- Vet ikke
+						}
+					}
+				}
+			}
+			ELEMENT[at0025] occurrences matches {0..1} matches {    -- Beskrivelse:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0026] occurrences matches {0..1} matches {    -- Har du problemer med å bøye hodet bakover?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0027,    -- Ja
+							at0028,    -- Nei
+							at0029]    -- Vet ikke
+						}
+					}
+				}
+			}
+			ELEMENT[at0030] occurrences matches {0..1} matches {    -- Beskrivelse:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0031] occurrences matches {0..1} matches {    -- Har du problemer med å bevege kjeven eller har du nedsatt gapeevne?
+				value matches {
+					DV_CODED_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0032] occurrences matches {0..1} matches {    -- Beskrivelse:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0033] occurrences matches {0..1} matches {    -- Klarer du å ligge flatt på ryggen?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0034,    -- Ja
+							at0035,    -- Nei
+							at0036]    -- Vet ikke
+						}
+					}
+				}
+			}
+			ELEMENT[at0037] occurrences matches {0..1} matches {    -- Beskrivelse:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0038] occurrences matches {0..1} matches {    -- Har du løse tenner, tannprotese eller piercing i munnen?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0039,    -- Ja
+							at0040]    -- Nei
+						}
+					}
+				}
+			}
+			ELEMENT[at0041] occurrences matches {0..1} matches {    -- Beskrivelse:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0042] occurrences matches {0..1} matches {    -- Har du sår eller utslett i huden?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0043,    -- Ja
+							at0044,    -- Nei
+							at0045]    -- Vet ikke
+						}
+					}
+				}
+			}
+			ELEMENT[at0046] occurrences matches {0..1} matches {    -- Beskrivelse:
 				value matches {
 					DV_TEXT matches {*}
 				}
@@ -131,6 +253,142 @@ ontology
 				>
 				["at0012"] = <
 					text = <"Hva slags bedøvelse og hva slags reaksjon?">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Har du hatt vekttap de siste ukene?">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Usikker">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Har du spist mindre enn normalt de siste ukene?">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Beskriv vekttap og eventuelt redusert matinntak:">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Har du lett for å bli kvalm eller reisesyk?">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"Vet ikke">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Beskrivelse:">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Har du problemer med å bøye hodet bakover?">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"Vet ikke">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"Beskrivelse:">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Har du problemer med å bevege kjeven eller har du nedsatt gapeevne?">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"Beskrivelse:">
+					description = <"">
+				>
+				["at0033"] = <
+					text = <"Klarer du å ligge flatt på ryggen?">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Vet ikke">
+					description = <"">
+				>
+				["at0037"] = <
+					text = <"Beskrivelse:">
+					description = <"">
+				>
+				["at0038"] = <
+					text = <"Har du løse tenner, tannprotese eller piercing i munnen?">
+					description = <"">
+				>
+				["at0039"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0040"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0041"] = <
+					text = <"Beskrivelse:">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"Har du sår eller utslett i huden?">
+					description = <"">
+				>
+				["at0043"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0044"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0045"] = <
+					text = <"Vet ikke">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"Beskrivelse:">
 					description = <"">
 				>
 			>
