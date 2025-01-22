@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9dd88cf950beb7f6d0974c5bbf73f506">
+		["MD5-CAM-1.0.1"] = <"41c2f2f8ae58738d1461398968698f3e">
 		["build_uid"] = <"da4afece-b125-3002-b9fb-142ab6d3ba3f">
 	>
 
@@ -92,6 +92,11 @@ definition
 							}
 						}
 					}
+					ELEMENT[at0020] occurrences matches {0..1} matches {    -- Beskrivelse:
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
 				}
 			}
 		}
@@ -115,7 +120,8 @@ ontology
 				>
 				["at0003"] = <
 					text = <"Har du behov for spesiell kost?">
-					description = <"">
+					description = <"Vi spør om dette i tilfelle du blir innlagt. ">
+					comment = <"Ja betyr at \"Beskrivelse:\" skal åpnes. ">
 				>
 				["at0004"] = <
 					text = <"Er du allergisk mot matvarer, pollen, lateks, nikkel eller annet?">
@@ -167,10 +173,14 @@ ontology
 				>
 				["at0018"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"Spiser ikke normal kost">
 				>
 				["at0019"] = <
 					text = <"Nei">
+					description = <"Spiser normal kost">
+				>
+				["at0020"] = <
+					text = <"Beskrivelse:">
 					description = <"">
 				>
 			>
