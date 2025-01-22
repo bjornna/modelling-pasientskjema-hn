@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"436c833fb29b2c929b5058f2e6302156">
+		["MD5-CAM-1.0.1"] = <"151dea9a0f1425666561b06800412312">
 		["build_uid"] = <"f7e4871e-fab2-36c8-8e52-51d674659bd7">
 	>
 
@@ -62,9 +62,9 @@ definition
 					DV_CODED_TEXT matches {
 						defining_code matches {
 							[local::
-							at0009,    -- Nei, ikke som jeg kjenner til
 							at0010,    -- Ja, på narkose
-							at0011]    -- Ja, på bedøvelse
+							at0011,    -- Ja, på bedøvelse
+							at0009]    -- Nei, ikke som jeg kjenner til
 						}
 					}
 				}
