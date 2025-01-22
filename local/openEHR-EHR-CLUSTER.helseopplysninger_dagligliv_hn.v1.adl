@@ -1,0 +1,180 @@
+archetype (adl_version=1.4; uid=79fc2296-77ab-4adb-abea-bdec37821ea8)
+	openEHR-EHR-CLUSTER.helseopplysninger_dagligliv_hn.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2025-01-22">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"c05654e9c33e4141508c14f926e116f3">
+		["build_uid"] = <"629c61cd-36e9-3b22-8a92-9fdff148157f">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- helseopplysninger_dagligliv_hn
+		items cardinality matches {0..*; unordered} matches {
+			ELEMENT[at0003] matches {    -- Har du behov for spesiell kost?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0018,    -- Ja
+							at0019]    -- Nei
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Beskrivelse:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Er du allergisk mot matvarer, pollen, lateks, nikkel eller annet?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0005,    -- Ja
+							at0006,    -- Nei
+							at0007]    -- Usikker
+						}
+					}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Hva er du allergisk mot og hvordan reagerer du?
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Har du problemer med å dusje, kle på deg eller utføre daglige gjøremål selv?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0016,    -- Ja
+							at0017]    -- Nei
+						}
+					}
+				}
+			}
+			ELEMENT[at0011] occurrences matches {0..1} matches {    -- Hva trenger du hjelp til?
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {    -- Har du problemer med syn, hørsel eller å snakke?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0013,    -- Ja
+							at0014]    -- Nei
+						}
+					}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Beskrivelse:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"helseopplysninger_dagligliv_hn">
+					description = <"Helseopplysning_dagligliv_hn">
+				>
+				["at0002"] = <
+					text = <"Beskrivelse:">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Har du behov for spesiell kost?">
+					description = <"Vi spør om dette i tilfelle du blir innlagt. ">
+					comment = <"Ja betyr at \"Beskrivelse:\" skal åpnes. ">
+				>
+				["at0004"] = <
+					text = <"Er du allergisk mot matvarer, pollen, lateks, nikkel eller annet?">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Usikker">
+					description = <"Pasienten vet ikke om det foreligger allergier">
+				>
+				["at0008"] = <
+					text = <"Hva er du allergisk mot og hvordan reagerer du?">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Har du problemer med å dusje, kle på deg eller utføre daglige gjøremål selv?">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Hva trenger du hjelp til?">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Har du problemer med syn, hørsel eller å snakke?">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Ja">
+					description = <"Har problemer med syn, hørsel eller å snakke">
+				>
+				["at0014"] = <
+					text = <"Nei">
+					description = <"Har ikke problemer med syn, hørsel eller å snakke">
+				>
+				["at0016"] = <
+					text = <"Ja">
+					description = <"Klarer å dusje, kle på seg og daglige gjøremål">
+				>
+				["at0017"] = <
+					text = <"Nei">
+					description = <"Klarer ikke å dusje, kle på seg og daglige gjøremål">
+				>
+				["at0018"] = <
+					text = <"Ja">
+					description = <"Spiser ikke normal kost">
+				>
+				["at0019"] = <
+					text = <"Nei">
+					description = <"Spiser normal kost">
+				>
+				["at0020"] = <
+					text = <"Beskrivelse:">
+					description = <"">
+				>
+			>
+		>
+	>
