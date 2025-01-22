@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"41c2f2f8ae58738d1461398968698f3e">
+		["MD5-CAM-1.0.1"] = <"4331573022d6f07d2142d51506e3dcd7">
 		["build_uid"] = <"da4afece-b125-3002-b9fb-142ab6d3ba3f">
 	>
 
@@ -157,19 +157,19 @@ ontology
 				>
 				["at0013"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"Har problemer med syn, hørsel eller å snakke">
 				>
 				["at0014"] = <
 					text = <"Nei">
-					description = <"">
+					description = <"Har ikke problemer med syn, hørsel eller å snakke">
 				>
 				["at0016"] = <
 					text = <"Ja">
-					description = <"">
+					description = <"Klarer å dusje, kle på seg og daglige gjøremål">
 				>
 				["at0017"] = <
 					text = <"Nei">
-					description = <"">
+					description = <"Klarer ikke å dusje, kle på seg og daglige gjøremål">
 				>
 				["at0018"] = <
 					text = <"Ja">
