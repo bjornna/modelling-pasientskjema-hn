@@ -1,0 +1,78 @@
+archetype (adl_version=1.4; uid=ca9d35ab-c937-462a-8788-b356dc92bded)
+	openEHR-EHR-CLUSTER.helseopplysninger_kardiovaskulaer_hn.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2025-01-22">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"3c7b4c2234d22b0231d8c65d422afffa">
+		["build_uid"] = <"f9523561-6c9d-39e1-9543-f1ff44fd2387">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- helseopplysninger_kardiovaskulaer_hn
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Får du brystsmerter eller blir du tungpustet når du går opp trapper i normalt tempo?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0003,    -- Ja
+							at0004]    -- Nei
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Beskrivelse:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"helseopplysninger_kardiovaskulaer_hn">
+					description = <"helseopplysninger_kardiovaskulaer_hn">
+				>
+				["at0001"] = <
+					text = <"Får du brystsmerter eller blir du tungpustet når du går opp trapper i normalt tempo?">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Beskrivelse:">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Nei">
+					description = <"">
+				>
+			>
+		>
+	>
