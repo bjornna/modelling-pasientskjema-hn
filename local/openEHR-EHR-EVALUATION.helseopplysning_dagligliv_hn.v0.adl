@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"40630381113eaf1fb57a0efb62fa0dff">
+		["MD5-CAM-1.0.1"] = <"7c64cd3cdd85085a87d4f8f725e3f682">
 		["build_uid"] = <"da4afece-b125-3002-b9fb-142ab6d3ba3f">
 	>
 
@@ -55,10 +55,15 @@ definition
 							}
 						}
 					}
-					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Beskrivelse:
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Hva er du allergisk mot og hvordan reagerer du?
 						value matches {
 							DV_CODED_TEXT matches {*}
 							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Har du problemer med å dusje, kle på deg eller
+						value matches {
+							DV_BOOLEAN matches {*}
 						}
 					}
 				}
@@ -103,7 +108,11 @@ ontology
 					description = <"Pasienten vet ikke om det foreligger allergier">
 				>
 				["at0008"] = <
-					text = <"Beskrivelse:">
+					text = <"Hva er du allergisk mot og hvordan reagerer du?">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Har du problemer med å dusje, kle på deg eller">
 					description = <"">
 				>
 			>
