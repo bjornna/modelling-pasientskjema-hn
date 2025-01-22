@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7c64cd3cdd85085a87d4f8f725e3f682">
+		["MD5-CAM-1.0.1"] = <"9dd88cf950beb7f6d0974c5bbf73f506">
 		["build_uid"] = <"da4afece-b125-3002-b9fb-142ab6d3ba3f">
 	>
 
@@ -34,12 +34,17 @@ definition
 				items cardinality matches {0..*; unordered} matches {
 					ELEMENT[at0003] matches {    -- Har du behov for spesiell kost?
 						value matches {
-							DV_BOOLEAN matches {*}
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0018,    -- Ja
+									at0019]    -- Nei
+								}
+							}
 						}
 					}
 					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Beskrivelse:
 						value matches {
-							DV_CODED_TEXT matches {*}
 							DV_TEXT matches {*}
 						}
 					}
@@ -57,13 +62,34 @@ definition
 					}
 					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Hva er du allergisk mot og hvordan reagerer du?
 						value matches {
-							DV_CODED_TEXT matches {*}
 							DV_TEXT matches {*}
 						}
 					}
-					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Har du problemer med å dusje, kle på deg eller
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Har du problemer med å dusje, kle på deg eller utføre daglige gjøremål selv?
 						value matches {
-							DV_BOOLEAN matches {*}
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0016,    -- Ja
+									at0017]    -- Nei
+								}
+							}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Hva trenger du hjelp til?
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Har du problemer med syn, hørsel eller å snakke?
+						value matches {
+							DV_CODED_TEXT matches {
+								defining_code matches {
+									[local::
+									at0013,    -- Ja
+									at0014]    -- Nei
+								}
+							}
 						}
 					}
 				}
@@ -112,7 +138,39 @@ ontology
 					description = <"">
 				>
 				["at0009"] = <
-					text = <"Har du problemer med å dusje, kle på deg eller">
+					text = <"Har du problemer med å dusje, kle på deg eller utføre daglige gjøremål selv?">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Hva trenger du hjelp til?">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Har du problemer med syn, hørsel eller å snakke?">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Nei">
 					description = <"">
 				>
 			>
