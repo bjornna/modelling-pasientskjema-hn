@@ -1,0 +1,138 @@
+archetype (adl_version=1.4; uid=06bac307-09cc-4f42-9801-d7023f9e0dfd)
+	openEHR-EHR-CLUSTER.helseopplysning_detaljer_om_operasjon_hn.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2025-01-22">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"436c833fb29b2c929b5058f2e6302156">
+		["build_uid"] = <"f7e4871e-fab2-36c8-8e52-51d674659bd7">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- helseopplysning_detaljer_om_operasjon_hn
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Har du tidligere hatt narkose, spinal- eller epidural (ryggbedøvelse)?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0002,    -- Ja
+							at0003]    -- Nei
+						}
+					}
+				}
+			}
+			ELEMENT[at0004] occurrences matches {0..1} matches {    -- Fikk du problemer i forbindelse med narkose, spinal eller epidural (ryggbedøvelse)?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0005,    -- Ja
+							at0006]    -- Nei
+						}
+					}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Beskriv problemer i forbindelse med dette:
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Har du, eller noen du er i slekt med, reagert unormalt på narkose eller bedøvelse?
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0009,    -- Nei, ikke som jeg kjenner til
+							at0010,    -- Ja, på narkose
+							at0011]    -- Ja, på bedøvelse
+						}
+					}
+				}
+			}
+			ELEMENT[at0012] occurrences matches {0..1} matches {    -- Hva slags bedøvelse og hva slags reaksjon?
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"helseopplysning_detaljer_om_operasjon_hn">
+					description = <"helseopplysning_detaljer_om_operasjon_hn">
+				>
+				["at0001"] = <
+					text = <"Har du tidligere hatt narkose, spinal- eller epidural (ryggbedøvelse)?">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Fikk du problemer i forbindelse med narkose, spinal eller epidural (ryggbedøvelse)?">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Ja">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Nei">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Beskriv problemer i forbindelse med dette:">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Har du, eller noen du er i slekt med, reagert unormalt på narkose eller bedøvelse?">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Nei, ikke som jeg kjenner til">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Ja, på narkose">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Ja, på bedøvelse">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Hva slags bedøvelse og hva slags reaksjon?">
+					description = <"">
+				>
+			>
+		>
+	>
