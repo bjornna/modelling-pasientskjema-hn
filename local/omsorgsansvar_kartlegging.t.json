@@ -1,0 +1,1400 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "a3223b62-18ad-4cf3-a64f-ce26dfa21643",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2024-10-10",
+      "name" : "Liv Laugen",
+      "organisation" : "OUS / NRUA"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "fa4766330c0d412eef78d1fdf5895305",
+      "PARENT:MD5-CAM-1.0.1" : "7A9C418DF698E41C35D1C915B88E22B9",
+      "sem_ver" : "2.0.0",
+      "build_uid" : "",
+      "original_language" : "ISO_639-1::nb"
+    },
+    "details" : {
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "purpose" : "For å registrere om et individ har ansvar/omsorg for mindreårige barn og andre individer over 18 år i forbindelse med prosjektet Strukturert Kreftjournal.",
+        "keywords" : [ "Omsorg, verge" ],
+        "use" : "Brukes for å registrere kartleggingsspørsmål om et individ har ansvar/omsorg for mindreårige barn og andre individer over 18 år i forbindelse med prosjektet Strukturert Kreftjournal.\n\nDette templatet vil bli brukt i prosjektet Strukturert Kreftjournal under sosialanamnese.\n\nArketypen Kartleggingsspørsmål om sosiale forhold (openEHR-EHR-OBSERVATION.social_context_screening.v1) er benyttet med to spørsmål, ett for om pasienten har ansvar for barn under 18 år og et spørsmål for om pasienten har ansvar for egne barn/andre over 18 år. \n\nSmåtemplatet med det standardiserte verdisettet kan benyttes utenfor Strukturert kreftjournal hvor det lagres data om kartleggingsspørsmål om omsorgsansvar.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "originalResourceUri" : { },
+        "otherDetails" : {
+          "notes" : "Generated automatically by Adl Designer"
+        }
+      },
+      "fi" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "fi"
+        },
+        "originalResourceUri" : { },
+        "otherDetails" : {
+          "notes" : "Generated automatically by Adl Designer"
+        }
+      },
+      "it" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "it"
+        },
+        "originalResourceUri" : { },
+        "otherDetails" : {
+          "notes" : "Generated automatically by Adl Designer"
+        }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-OBSERVATION.social_context_screening.v1",
+  "differential" : false,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-OBSERVATION.t_social_context_screening.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "OBSERVATION",
+    "occurrences" : "1..1",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "data",
+      "existence" : "1..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "HISTORY",
+        "occurrences" : "1..1",
+        "nodeId" : "at0001",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "events",
+          "existence" : "0..1",
+          "cardinality" : {
+            "@type" : "CARDINALITY",
+            "interval" : "0..*",
+            "ordered" : false,
+            "unique" : false
+          },
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "EVENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0002.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "data",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ITEM_TREE",
+                "occurrences" : "1..1",
+                "nodeId" : "at0003",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "items",
+                  "existence" : "0..1",
+                  "cardinality" : {
+                    "@type" : "CARDINALITY",
+                    "interval" : "0..*",
+                    "ordered" : false,
+                    "unique" : false
+                  },
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "occurrences" : "0..1",
+                    "nodeId" : "at0034.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "existence" : "0..1",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_CODED_TEXT",
+                        "occurrences" : "1..1",
+                        "defaultValue" : {
+                          "defining_code" : {
+                            "terminology_id" : {
+                              "value" : "no.onk.sosiale_forhold",
+                              "@type" : "TERMINOLOGY_ID"
+                            },
+                            "code_string" : "OA",
+                            "@type" : "CODE_PHRASE"
+                          },
+                          "value" : "Kartlegging av om individet har omsorgsansvar",
+                          "@type" : "DV_CODED_TEXT"
+                        },
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "defining_code",
+                          "children" : [ {
+                            "@type" : "C_TERMINOLOGY_CODE",
+                            "rmTypeName" : "TERMINOLOGY_CODE",
+                            "occurrences" : "0..1",
+                            "terminologyId" : {
+                              "value" : "no.onk.sosiale_forhold"
+                            },
+                            "constraint" : [ ],
+                            "selectedTerminologies" : [ "no.onk.sosiale_forhold" ],
+                            "includedExternalTerminologyCodes" : [ {
+                              "terminologyId" : "no.onk.sosiale_forhold",
+                              "code" : "OA",
+                              "value" : "Kartlegging av om individet har omsorgsansvar"
+                            } ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..1",
+                    "nodeId" : "at0022.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "items",
+                      "existence" : "1..1",
+                      "cardinality" : {
+                        "@type" : "CARDINALITY",
+                        "interval" : "1..*",
+                        "ordered" : false,
+                        "unique" : false
+                      },
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "1..1",
+                        "nodeId" : "at0004.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "occurrences" : "1..1",
+                            "defaultValue" : {
+                              "defining_code" : {
+                                "terminology_id" : {
+                                  "value" : "no.onk.sosiale_forhold",
+                                  "@type" : "TERMINOLOGY_ID"
+                                },
+                                "code_string" : "U18",
+                                "@type" : "CODE_PHRASE"
+                              },
+                              "value" : "Ansvarlig for barn under 18 år",
+                              "@type" : "DV_CODED_TEXT"
+                            },
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "no.onk.sosiale_forhold"
+                                },
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "no.onk.sosiale_forhold" ],
+                                "includedExternalTerminologyCodes" : [ {
+                                  "terminologyId" : "no.onk.sosiale_forhold",
+                                  "code" : "U18",
+                                  "value" : "Ansvarlig for barn under 18 år"
+                                } ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..1",
+                        "nodeId" : "at0005.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "existence" : "1..1",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "CODE_PHRASE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "local"
+                                },
+                                "constraint" : [ "at0023", "at0024", "at0027" ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "ARCHETYPE_SLOT",
+                        "rmTypeName" : "CLUSTER",
+                        "occurrences" : "0..*",
+                        "nodeId" : "at0026",
+                        "includes" : [ {
+                          "@type" : "ASSERTION",
+                          "stringExpression" : "archetype_id/value matches {/.*/}",
+                          "expression" : {
+                            "@type" : "BINARY_OPERATOR",
+                            "type" : "BOOLEAN",
+                            "operator" : "matches",
+                            "leftOperand" : {
+                              "@type" : "MODEL_REFERENCE",
+                              "type" : "STRING",
+                              "precedenceOverriden" : false,
+                              "referenceType" : "Attribute",
+                              "path" : "archetype_id/value"
+                            },
+                            "rightOperand" : {
+                              "@type" : "CONSTRAINT",
+                              "type" : "STRING",
+                              "precedenceOverriden" : false,
+                              "referenceType" : "Constraint",
+                              "item" : {
+                                "@type" : "C_STRING",
+                                "constraint" : [ "/.*/" ]
+                              }
+                            },
+                            "precedenceOverriden" : false
+                          },
+                          "variables" : [ ]
+                        } ],
+                        "excludes" : [ ],
+                        "closed" : false
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..0",
+                        "nodeId" : "at0025.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..1",
+                    "nodeId" : "at0022.2",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "items",
+                      "existence" : "1..1",
+                      "cardinality" : {
+                        "@type" : "CARDINALITY",
+                        "interval" : "1..*",
+                        "ordered" : false,
+                        "unique" : false
+                      },
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "1..1",
+                        "nodeId" : "at0004.2",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "occurrences" : "1..1",
+                            "defaultValue" : {
+                              "defining_code" : {
+                                "terminology_id" : {
+                                  "value" : "no.onk.sosiale_forhold",
+                                  "@type" : "TERMINOLOGY_ID"
+                                },
+                                "code_string" : "O18",
+                                "@type" : "CODE_PHRASE"
+                              },
+                              "value" : "Ansvarlig for barn/andre over 18 år",
+                              "@type" : "DV_CODED_TEXT"
+                            },
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "no.onk.sosiale_forhold"
+                                },
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "no.onk.sosiale_forhold" ],
+                                "includedExternalTerminologyCodes" : [ {
+                                  "terminologyId" : "no.onk.sosiale_forhold",
+                                  "code" : "O18",
+                                  "value" : "Ansvarlig for barn/andre over 18 år"
+                                } ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..1",
+                        "nodeId" : "at0005.2",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "existence" : "1..1",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "CODE_PHRASE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "local"
+                                },
+                                "constraint" : [ "at0023", "at0024", "at0027" ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "ARCHETYPE_SLOT",
+                        "rmTypeName" : "CLUSTER",
+                        "occurrences" : "0..*",
+                        "nodeId" : "at0026",
+                        "includes" : [ {
+                          "@type" : "ASSERTION",
+                          "stringExpression" : "archetype_id/value matches {/.*/}",
+                          "expression" : {
+                            "@type" : "BINARY_OPERATOR",
+                            "type" : "BOOLEAN",
+                            "operator" : "matches",
+                            "leftOperand" : {
+                              "@type" : "MODEL_REFERENCE",
+                              "type" : "STRING",
+                              "precedenceOverriden" : false,
+                              "referenceType" : "Attribute",
+                              "path" : "archetype_id/value"
+                            },
+                            "rightOperand" : {
+                              "@type" : "CONSTRAINT",
+                              "type" : "STRING",
+                              "precedenceOverriden" : false,
+                              "referenceType" : "Constraint",
+                              "item" : {
+                                "@type" : "C_STRING",
+                                "constraint" : [ "/.*/" ]
+                              }
+                            },
+                            "precedenceOverriden" : false
+                          },
+                          "variables" : [ ]
+                        } ],
+                        "excludes" : [ ],
+                        "closed" : false
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..0",
+                        "nodeId" : "at0025.2",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "ARCHETYPE_SLOT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..*",
+                    "nodeId" : "at0044",
+                    "includes" : [ {
+                      "@type" : "ASSERTION",
+                      "stringExpression" : "archetype_id/value matches {/.*/}",
+                      "expression" : {
+                        "@type" : "BINARY_OPERATOR",
+                        "type" : "BOOLEAN",
+                        "operator" : "matches",
+                        "leftOperand" : {
+                          "@type" : "MODEL_REFERENCE",
+                          "type" : "STRING",
+                          "precedenceOverriden" : false,
+                          "referenceType" : "Attribute",
+                          "path" : "archetype_id/value"
+                        },
+                        "rightOperand" : {
+                          "@type" : "CONSTRAINT",
+                          "type" : "STRING",
+                          "precedenceOverriden" : false,
+                          "referenceType" : "Constraint",
+                          "item" : {
+                            "@type" : "C_STRING",
+                            "constraint" : [ "/.*/" ]
+                          }
+                        },
+                        "precedenceOverriden" : false
+                      },
+                      "variables" : [ ]
+                    } ],
+                    "excludes" : [ ],
+                    "closed" : false
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "protocol",
+      "existence" : "0..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "occurrences" : "1..1",
+        "nodeId" : "at0007",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "existence" : "0..1",
+          "cardinality" : {
+            "@type" : "CARDINALITY",
+            "interval" : "0..*",
+            "ordered" : false,
+            "unique" : false
+          },
+          "children" : [ {
+            "@type" : "ARCHETYPE_SLOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0021",
+            "includes" : [ {
+              "@type" : "ASSERTION",
+              "stringExpression" : "archetype_id/value matches {/.*/}",
+              "expression" : {
+                "@type" : "BINARY_OPERATOR",
+                "type" : "BOOLEAN",
+                "operator" : "matches",
+                "leftOperand" : {
+                  "@type" : "MODEL_REFERENCE",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Attribute",
+                  "path" : "archetype_id/value"
+                },
+                "rightOperand" : {
+                  "@type" : "CONSTRAINT",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Constraint",
+                  "item" : {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "/.*/" ]
+                  }
+                },
+                "precedenceOverriden" : false
+              },
+              "variables" : [ ]
+            } ],
+            "excludes" : [ ],
+            "closed" : false
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Kartlegging omsorgsansvar",
+          "description" : "Series of questions and associated answers used to screen about the social environment and social situation which may impact the health and well-being of the individual, especially to identify potential issues or risks."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år",
+          "description" : "Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "Has there been experience of the specified 'Context'?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0022.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.2",
+          "text" : "Omsorgsperson for personer over 18 år",
+          "description" : "Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose."
+        },
+        "at0005.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.2",
+          "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
+          "description" : "Has there been experience of the specified 'Context'?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Social context screening questionnaire",
+          "description" : "Series of questions and associated answers used to screen about the social environment and social situation which may impact the health and well-being of the individual, especially to identify potential issues or risks."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Any event",
+          "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Context",
+          "description" : "Identification of a specific social circumstance, issue or concern relevant for the questionnaire or grouping of such, by name.",
+          "comment" : "This element offers a choice between free and coded text. It is anticipated that the list of coded values will grow as requirements are identified. Coding of the 'Context' with a terminology is preferred, where possible - for example, relevant terms within the Social context finding hierarchy in SNOMED CT (SCTID: 108329005). Alternatively as free text, for example 'Social isolation', 'Discrimination', 'Minority stress'."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presence?",
+          "description" : "Has there been experience of the specified 'Context'?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Extension",
+          "description" : "Additional information required to extend the model with local content or to align with other reference models or formalisms.",
+          "comment" : "For example: local information requirements; or additional metadata to align with FHIR."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Specific social context",
+          "description" : "Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Yes",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "No",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Comment",
+          "description" : "Additional narrative about the specific social context, not captured in other fields."
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Additional details",
+          "description" : "Additional details or questions about the specific social context."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Unknown",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Screening purpose",
+          "description" : "The context or reason for screening.",
+          "comment" : "This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data. For example: pre-admission screening or the name of the actual questionnaire."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "Additional details",
+          "description" : "Additional structured details or questions about screening for social context items."
+        },
+        "at0048" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0048",
+          "text" : "Homeless",
+          "description" : "The individual does not have a stable place to live."
+        },
+        "at0049" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0049",
+          "text" : "Interpreter needed",
+          "description" : "The individual needs assistance with language translation."
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Any event",
+          "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Comment",
+          "description" : "Additional narrative about the specific social context, not captured in other fields."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Context",
+          "description" : "Identification of a specific social circumstance, issue or concern relevant for the questionnaire or grouping of such, by name.",
+          "comment" : "This element offers a choice between free and coded text. It is anticipated that the list of coded values will grow as requirements are identified. Coding of the 'Context' with a terminology is preferred, where possible - for example, relevant terms within the Social context finding hierarchy in SNOMED CT (SCTID: 108329005). Alternatively as free text, for example 'Social isolation', 'Discrimination', 'Minority stress'."
+        },
+        "at0004.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Context",
+          "description" : "Identification of a specific social circumstance, issue or concern relevant for the questionnaire or grouping of such, by name.",
+          "comment" : "This element offers a choice between free and coded text. It is anticipated that the list of coded values will grow as requirements are identified. Coding of the 'Context' with a terminology is preferred, where possible - for example, relevant terms within the Social context finding hierarchy in SNOMED CT (SCTID: 108329005). Alternatively as free text, for example 'Social isolation', 'Discrimination', 'Minority stress'."
+        },
+        "at0025.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Comment",
+          "description" : "Additional narrative about the specific social context, not captured in other fields."
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Screening purpose",
+          "description" : "The context or reason for screening.",
+          "comment" : "This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data. For example: pre-admission screening or the name of the actual questionnaire."
+        }
+      },
+      "fi" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Kartlegging omsorgsansvar",
+          "description" : "*Series of questions and associated answers used to screen about the social environment and social situation which may impact the health and well-being of the individual, especially to identify potential issues or risks. (en)"
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0022.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.2",
+          "text" : "Omsorgsperson for personer over 18 år",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0005.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.2",
+          "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "*Social context screening questionnaire (en)",
+          "description" : "*Series of questions and associated answers used to screen about the social environment and social situation which may impact the health and well-being of the individual, especially to identify potential issues or risks. (en)"
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "*Any event(en)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Context (en)",
+          "description" : "*Identification of a specific social circumstance, issue or concern relevant for the questionnaire or grouping of such, by name.  (en)",
+          "comment" : "*This element offers a choice between free and coded text. It is anticipated that the list of coded values will grow as requirements are identified. Coding of the 'Context' with a terminology is preferred, where possible - for example, relevant terms within the Social context finding hierarchy in SNOMED CT (SCTID: 108329005). (en)"
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Olemassalolo",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "*Extension(en)",
+          "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
+          "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "*Specific social context (en)",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "*Yes (en)",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "*No (en)",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentit",
+          "description" : "*Additional narrative about the specific social context, not captured in other fields. (en)"
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "*Additional details (en)",
+          "description" : "*Additional details or questions about the specific social context. (en)"
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "*Unknown (en)",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "*Screening purpose(en)",
+          "description" : "*The context or reason for screening. (en)",
+          "comment" : "*This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data. For example: pre-admission screening or the name of the actual questionnaire. (en)"
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "*Additional details (en)",
+          "description" : "*Additional structured details or questions about screening for social context items. (en)"
+        },
+        "at0048" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0048",
+          "text" : "*Homeless (en)",
+          "description" : "*The individual does not have a stable place to live. (en)"
+        },
+        "at0049" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0049",
+          "text" : "*Interpreter needed (en)",
+          "description" : "*The individual needs assistance with language translation (en)"
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "*Any event(en)",
+          "description" : "*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)"
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentit",
+          "description" : "*Additional narrative about the specific social context, not captured in other fields. (en)"
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Context (en)",
+          "description" : "*Identification of a specific social circumstance, issue or concern relevant for the questionnaire or grouping of such, by name.  (en)",
+          "comment" : "*This element offers a choice between free and coded text. It is anticipated that the list of coded values will grow as requirements are identified. Coding of the 'Context' with a terminology is preferred, where possible - for example, relevant terms within the Social context finding hierarchy in SNOMED CT (SCTID: 108329005). (en)"
+        },
+        "at0004.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Context (en)",
+          "description" : "*Identification of a specific social circumstance, issue or concern relevant for the questionnaire or grouping of such, by name.  (en)",
+          "comment" : "*This element offers a choice between free and coded text. It is anticipated that the list of coded values will grow as requirements are identified. Coding of the 'Context' with a terminology is preferred, where possible - for example, relevant terms within the Social context finding hierarchy in SNOMED CT (SCTID: 108329005). (en)"
+        },
+        "at0025.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentit",
+          "description" : "*Additional narrative about the specific social context, not captured in other fields. (en)"
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "*Screening purpose(en)",
+          "description" : "*The context or reason for screening. (en)",
+          "comment" : "*This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data. For example: pre-admission screening or the name of the actual questionnaire. (en)"
+        }
+      },
+      "nb" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Kartlegging omsorgsansvar",
+          "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge sosialt miljø og sosiale forhold som kan ha betydning for helse og velferd til et individ, spesielt for å identifisere potensielle utfordringer eller risiko."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år",
+          "description" : "Detaljer om et spesifikt sosialt forhold, eller en gruppering av slike, som er innenfor kartleggingsformålet."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?",
+          "comment" : "I templat vil navnet på dataelementet normalt omformuleres til det spesifikke spørsmålet. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "at0022.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.2",
+          "text" : "Omsorgsperson for personer over 18 år",
+          "description" : "Detaljer om et spesifikt sosialt forhold, eller en gruppering av slike, som er innenfor kartleggingsformålet."
+        },
+        "at0005.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.2",
+          "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
+          "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?",
+          "comment" : "I templat vil navnet på dataelementet normalt omformuleres til det spesifikke spørsmålet. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Kartleggingsspørsmål om sosiale forhold",
+          "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge sosialt miljø og sosiale forhold som kan ha betydning for helse og velferd til et individ, spesielt for å identifisere potensielle utfordringer eller risiko."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Uspesifikk hendelse",
+          "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Sosialt forhold",
+          "description" : "Navngiving av et spesifikt sosialt forhold, problem eller bekymring som er relevant for spørreskjemaet, eller en gruppering av slike.",
+          "comment" : "Dette elementet tilbyr valg mellom fritekst og kodet tekst. Det er antatt at listen av kodede verdier vil vokse ettersom man identifiserer flere behov. Det er anbefalt å kode \"Sosialt forhold\" med en terminologi dersom det er mulig - for eksempel relevante termer innen hierarkiet til SNOMED CT's Social context finding hierarchy (SCTID: 108329005). Alternativt som fritekst, for eksempel \"Forsørgelsesbyrde\", \"Sosial isolasjon\", \"Diskriminering\", \"Minoritetsstress\"."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Tilstede?",
+          "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?",
+          "comment" : "I templat vil navnet på dataelementet normalt omformuleres til det spesifikke spørsmålet. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Tilleggsinformasjon",
+          "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
+          "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Spesifikt sosialt forhold",
+          "description" : "Detaljer om et spesifikt sosialt forhold, eller en gruppering av slike, som er innenfor kartleggingsformålet."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Ja",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Nei",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "Ytterligere fritekst om det spesifikke sosiale forholdet som ikke er omfattet av andre felt."
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Ytterligere detaljer",
+          "description" : "Strukturerte detaljer eller spørsmål om det spesifikke sosiale forholdet."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Ukjent",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Kartleggingsformål",
+          "description" : "Konteksten eller årsaken for kartleggingen.",
+          "comment" : "Dette dataelementet er ment for å sette en kontekst for samlingen av spørsmål/svar til bruk senere for å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: \"Preoperativ screening\" eller navnet på det faktiske spørreskjemaet."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "Ytterligere detaljer",
+          "description" : "Strukturerte detaljer eller spørsmål om kartleggingen om sosiale forhold."
+        },
+        "at0048" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0048",
+          "text" : "Hjemløs",
+          "description" : "Individet har ingen fast bopel."
+        },
+        "at0049" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0049",
+          "text" : "Trenger tolk",
+          "description" : "Individet trenger assistanse til oversettelse."
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Uspesifikk hendelse",
+          "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "Ytterligere fritekst om det spesifikke sosiale forholdet som ikke er omfattet av andre felt."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Sosialt forhold",
+          "description" : "Navngiving av et spesifikt sosialt forhold, problem eller bekymring som er relevant for spørreskjemaet, eller en gruppering av slike.",
+          "comment" : "Dette elementet tilbyr valg mellom fritekst og kodet tekst. Det er antatt at listen av kodede verdier vil vokse ettersom man identifiserer flere behov. Det er anbefalt å kode \"Sosialt forhold\" med en terminologi dersom det er mulig - for eksempel relevante termer innen hierarkiet til SNOMED CT's Social context finding hierarchy (SCTID: 108329005). Alternativt som fritekst, for eksempel \"Forsørgelsesbyrde\", \"Sosial isolasjon\", \"Diskriminering\", \"Minoritetsstress\"."
+        },
+        "at0004.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Sosialt forhold",
+          "description" : "Navngiving av et spesifikt sosialt forhold, problem eller bekymring som er relevant for spørreskjemaet, eller en gruppering av slike.",
+          "comment" : "Dette elementet tilbyr valg mellom fritekst og kodet tekst. Det er antatt at listen av kodede verdier vil vokse ettersom man identifiserer flere behov. Det er anbefalt å kode \"Sosialt forhold\" med en terminologi dersom det er mulig - for eksempel relevante termer innen hierarkiet til SNOMED CT's Social context finding hierarchy (SCTID: 108329005). Alternativt som fritekst, for eksempel \"Forsørgelsesbyrde\", \"Sosial isolasjon\", \"Diskriminering\", \"Minoritetsstress\"."
+        },
+        "at0025.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "Ytterligere fritekst om det spesifikke sosiale forholdet som ikke er omfattet av andre felt."
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Kartleggingsformål",
+          "description" : "Konteksten eller årsaken for kartleggingen.",
+          "comment" : "Dette dataelementet er ment for å sette en kontekst for samlingen av spørsmål/svar til bruk senere for å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: \"Preoperativ screening\" eller navnet på det faktiske spørreskjemaet."
+        }
+      },
+      "it" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Kartlegging omsorgsansvar",
+          "description" : "*Series of questions and associated answers used to screen about the social environment and social situation which may impact the health and well-being of the individual, especially to identify potential issues or risks. (en)"
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0022.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.2",
+          "text" : "Omsorgsperson for personer over 18 år",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0005.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.2",
+          "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "*Social context screening questionnaire (en)",
+          "description" : "*Series of questions and associated answers used to screen about the social environment and social situation which may impact the health and well-being of the individual, especially to identify potential issues or risks. (en)"
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Qualsiasi evento",
+          "description" : "Evento predefinito, non specificato nel tempo o nell'intervallo di tempo, che può essere definito esplicitamente in un modello o in fase di esecuzione."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Context (en)",
+          "description" : "*Identification of a specific social circumstance, issue or concern relevant for the questionnaire or grouping of such, by name.  (en)",
+          "comment" : "*This element offers a choice between free and coded text. It is anticipated that the list of coded values will grow as requirements are identified. Coding of the 'Context' with a terminology is preferred, where possible - for example, relevant terms within the Social context finding hierarchy in SNOMED CT (SCTID: 108329005). (en)"
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presenza?",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Estensione",
+          "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
+          "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "*Specific social context (en)",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "*Yes (en)",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "*No (en)",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Commento",
+          "description" : "*Additional narrative about the specific social context, not captured in other fields. (en)"
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "*Additional details (en)",
+          "description" : "*Additional details or questions about the specific social context. (en)"
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "*Unknown (en)",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Scopo dello screening",
+          "description" : "*The context or reason for screening. (en)",
+          "comment" : "*This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data. For example: pre-admission screening or the name of the actual questionnaire. (en)"
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "*Additional details (en)",
+          "description" : "*Additional structured details or questions about screening for social context items. (en)"
+        },
+        "at0048" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0048",
+          "text" : "*Homeless (en)",
+          "description" : "*The individual does not have a stable place to live. (en)"
+        },
+        "at0049" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0049",
+          "text" : "*Interpreter needed (en)",
+          "description" : "*The individual needs assistance with language translation (en)"
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Qualsiasi evento",
+          "description" : "Evento predefinito, non specificato nel tempo o nell'intervallo di tempo, che può essere definito esplicitamente in un modello o in fase di esecuzione."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Commento",
+          "description" : "*Additional narrative about the specific social context, not captured in other fields. (en)"
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Context (en)",
+          "description" : "*Identification of a specific social circumstance, issue or concern relevant for the questionnaire or grouping of such, by name.  (en)",
+          "comment" : "*This element offers a choice between free and coded text. It is anticipated that the list of coded values will grow as requirements are identified. Coding of the 'Context' with a terminology is preferred, where possible - for example, relevant terms within the Social context finding hierarchy in SNOMED CT (SCTID: 108329005). (en)"
+        },
+        "at0004.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Context (en)",
+          "description" : "*Identification of a specific social circumstance, issue or concern relevant for the questionnaire or grouping of such, by name.  (en)",
+          "comment" : "*This element offers a choice between free and coded text. It is anticipated that the list of coded values will grow as requirements are identified. Coding of the 'Context' with a terminology is preferred, where possible - for example, relevant terms within the Social context finding hierarchy in SNOMED CT (SCTID: 108329005). (en)"
+        },
+        "at0025.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Commento",
+          "description" : "*Additional narrative about the specific social context, not captured in other fields. (en)"
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Scopo dello screening",
+          "description" : "*The context or reason for screening. (en)",
+          "comment" : "*This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data. For example: pre-admission screening or the name of the actual questionnaire. (en)"
+        }
+      }
+    },
+    "termBindings" : {
+      "SNOMED-CT" : {
+        "at0023" : "term:SNOMED-CT::373066001",
+        "at0024" : "term:SNOMED-CT::373067005",
+        "at0027" : "term:SNOMED-CT::261665006",
+        "at0048" : "term:SNOMED-CT::32911000",
+        "at0049" : "term:SNOMED-CT::315594003"
+      }
+    },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "3cbb778c-7c1e-392d-b72f-14995d51bb52",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "omsorgsansvar_kartlegging",
+  "otherMetaData" : { },
+  "templateOverlays" : [ ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "fi"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : {
+      "name" : "Marit Alice Venheim, John Tore Valand, Vebjørn Arntzen, Liv Laugen",
+      "organisation" : "Helse Vest IKT AS, Helse Bergen, Oslo University Hospital, ​Oslo University Hospital, Norway",
+      "email" : "marit.alice.venheim@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, varntzen@ous-hf.no, john.tore.valand@helse-vest-ikt.no, liv.laugen@ous-hf.no"
+    },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "it"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  } ]
+}
