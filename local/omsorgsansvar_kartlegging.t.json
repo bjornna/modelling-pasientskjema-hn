@@ -21,9 +21,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "fa4766330c0d412eef78d1fdf5895305",
+      "MD5-CAM-1.0.1" : "5f69fa8e9119d5cb72144f177b189a3d",
       "PARENT:MD5-CAM-1.0.1" : "7A9C418DF698E41C35D1C915B88E22B9",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "3.0.0",
       "build_uid" : "",
       "original_language" : "ISO_639-1::nb"
     },
@@ -258,6 +258,84 @@
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
                     "occurrences" : "0..1",
+                    "nodeId" : "at0022.3",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "items",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0004.3",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "no.onk.sosiale_forhold"
+                                },
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "no.onk.sosiale_forhold" ],
+                                "includedExternalTerminologyCodes" : [ {
+                                  "terminologyId" : "no.onk.sosiale_forhold",
+                                  "code" : "BPU18",
+                                  "value" : "Barn som pårørende"
+                                } ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0005.3",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "local"
+                                },
+                                "constraint" : [ "ac0.13" ],
+                                "selectedTerminologies" : [ ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0025.3",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..1",
                     "nodeId" : "at0022.2",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -393,6 +471,25 @@
           "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
           "description" : "Has there been experience of the specified 'Context'?",
           "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0022.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år (2)",
+          "description" : "Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose."
+        },
+        "at0005.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "Has there been experience of the specified 'Context'?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "ac0.13" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.13",
+          "description" : ""
         }
       },
       "fi" : {
@@ -427,6 +524,25 @@
           "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
           "description" : "*Has there been experience of the specified 'Context'? (en)",
           "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0022.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år (2)",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0005.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "ac0.13" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.13",
+          "description" : ""
         }
       },
       "nb" : {
@@ -461,6 +577,25 @@
           "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
           "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?",
           "comment" : "I templat vil navnet på dataelementet normalt omformuleres til det spesifikke spørsmålet. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "at0022.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.3",
+          "text" : "Barn som pårørende",
+          "description" : "Detaljer om et spesifikt sosialt forhold, eller en gruppering av slike, som er innenfor kartleggingsformålet."
+        },
+        "at0005.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.3",
+          "text" : "Finnes det barn som pårørende?",
+          "description" : "Har individet hatt noen erfaring med det spesifiserte \"Sosialt forhold\"?",
+          "comment" : "I templat vil navnet på dataelementet normalt omformuleres til det spesifikke spørsmålet. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "ac0.13" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.13",
+          "description" : ""
         }
       },
       "it" : {
@@ -495,12 +630,97 @@
           "text" : "Har pasienten ansvar for egne barn/andre over 18 år?",
           "description" : "*Has there been experience of the specified 'Context'? (en)",
           "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0022.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Omsorgsperson for barn under 18 år (2)",
+          "description" : "*Details about a specified social context or issue, or a grouping of these, relevant for the screening purpose. (en)"
+        },
+        "at0005.3" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005.1",
+          "text" : "Har pasienten ansvar for barn under 18 år?",
+          "description" : "*Has there been experience of the specified 'Context'? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "ac0.13" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.13",
+          "description" : ""
         }
       }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
-    "valueSets" : { }
+    "valueSets" : {
+      "ac0.1" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.1",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.2" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.2",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.3" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.3",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.4" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.4",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.5" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.5",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.6" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.6",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.7" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.7",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.8" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.8",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.9" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.9",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.10" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.10",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.11" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.11",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.12" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.12",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      },
+      "ac0.13" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.13",
+        "members" : [ "at0023", "at0024", "at0027" ]
+      }
+    }
   },
   "adlVersion" : "1.4",
   "buildUid" : "3cbb778c-7c1e-392d-b72f-14995d51bb52",
