@@ -1,0 +1,298 @@
+archetype (adl_version=1.4; uid=4c7541fd-b655-49b4-845c-5deb70e62301)
+	openEHR-EHR-CLUSTER.ad_hoc_tilleggsinformasjon_hn.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2025-01-30">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"4bb44868f332c210fc7ba26900c710b4">
+		["build_uid"] = <"8e336f0b-9a3c-376c-ad5d-023ce336935b">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- ad_hoc_tilleggsinformasjon_hn
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Skriv inn ja/nei spørsmål
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0011,    -- Ja
+							at0012,    -- Nei
+							at0013,    -- Ukjent
+							at0014]    -- Usikker
+						}
+					}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Hvis ja, beskrivelse
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0015] occurrences matches {0..1} matches {    -- Skriv inn ja/nei spørsmål
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0016,    -- Ja
+							at0017,    -- Nei
+							at0018,    -- Ukjent
+							at0019]    -- Usikker
+						}
+					}
+				}
+			}
+			ELEMENT[at0007] occurrences matches {0..1} matches {    -- Hvis ja, beskrivelse
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0020] occurrences matches {0..1} matches {    -- Skriv inn ja/nei spørsmål
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0021,    -- Ja
+							at0022,    -- Nei
+							at0023,    -- Ukjent
+							at0024]    -- Usikker
+						}
+					}
+				}
+			}
+			ELEMENT[at0008] occurrences matches {0..1} matches {    -- Hvis ja, beskrivelse
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0025] occurrences matches {0..1} matches {    -- Skriv inn ja/nei spørsmål
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0026,    -- Ja
+							at0027,    -- Nei
+							at0028,    -- Ukjent
+							at0029]    -- Usikker
+						}
+					}
+				}
+			}
+			ELEMENT[at0009] occurrences matches {0..1} matches {    -- Hvis ja, beskrivelse
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0030] occurrences matches {0..1} matches {    -- Skriv inn ja/nei spørsmål
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0031,    -- Ja
+							at0032,    -- Nei
+							at0033,    -- Ukjent
+							at0034]    -- Usikker
+						}
+					}
+				}
+			}
+			ELEMENT[at0010] occurrences matches {0..1} matches {    -- Hvis ja, beskrivelse
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0035] occurrences matches {0..1} matches {    -- Skriv inn ja/nei spørsmål
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0036,    -- Ja
+							at0037,    -- Nei
+							at0038,    -- Ukjent
+							at0039]    -- Usikker
+						}
+					}
+				}
+			}
+			ELEMENT[at0040] occurrences matches {0..1} matches {    -- Hvis ja, beskrivelse
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"ad_hoc_tilleggsinformasjon_hn">
+					description = <"ad_hoc_tilleggsinformasjon_hn">
+				>
+				["at0001"] = <
+					text = <"Skriv inn ja/nei spørsmål">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Hvis ja, beskrivelse">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Hvis ja, beskrivelse">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Hvis ja, beskrivelse">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Hvis ja, beskrivelse">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Hvis ja, beskrivelse">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Ja">
+					description = <"Ja">
+				>
+				["at0012"] = <
+					text = <"Nei">
+					description = <"Nei">
+				>
+				["at0013"] = <
+					text = <"Ukjent">
+					description = <"Ukjent">
+				>
+				["at0014"] = <
+					text = <"Usikker">
+					description = <"Usikker">
+				>
+				["at0015"] = <
+					text = <"Skriv inn ja/nei spørsmål">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Ja">
+					description = <"Ja">
+				>
+				["at0017"] = <
+					text = <"Nei">
+					description = <"Nei">
+				>
+				["at0018"] = <
+					text = <"Ukjent">
+					description = <"Ukjent">
+				>
+				["at0019"] = <
+					text = <"Usikker">
+					description = <"Usikker">
+				>
+				["at0020"] = <
+					text = <"Skriv inn ja/nei spørsmål">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Ja">
+					description = <"Ja">
+				>
+				["at0022"] = <
+					text = <"Nei">
+					description = <"Nei">
+				>
+				["at0023"] = <
+					text = <"Ukjent">
+					description = <"Ukjent">
+				>
+				["at0024"] = <
+					text = <"Usikker">
+					description = <"Usikker">
+				>
+				["at0025"] = <
+					text = <"Skriv inn ja/nei spørsmål">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Ja">
+					description = <"Ja">
+				>
+				["at0027"] = <
+					text = <"Nei">
+					description = <"Nei">
+				>
+				["at0028"] = <
+					text = <"Ukjent">
+					description = <"Ukjent">
+				>
+				["at0029"] = <
+					text = <"Usikker">
+					description = <"Usikker">
+				>
+				["at0030"] = <
+					text = <"Skriv inn ja/nei spørsmål">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"Ja">
+					description = <"Ja">
+				>
+				["at0032"] = <
+					text = <"Nei">
+					description = <"Nei">
+				>
+				["at0033"] = <
+					text = <"Ukjent">
+					description = <"Ukjent">
+				>
+				["at0034"] = <
+					text = <"Usikker">
+					description = <"Usikker">
+				>
+				["at0035"] = <
+					text = <"Skriv inn ja/nei spørsmål">
+					description = <"">
+				>
+				["at0036"] = <
+					text = <"Ja">
+					description = <"Ja">
+				>
+				["at0037"] = <
+					text = <"Nei">
+					description = <"Nei">
+				>
+				["at0038"] = <
+					text = <"Ukjent">
+					description = <"Ukjent">
+				>
+				["at0039"] = <
+					text = <"Usikker">
+					description = <"Usikker">
+				>
+				["at0040"] = <
+					text = <"Hvis ja, beskrivelse">
+					description = <"">
+				>
+			>
+		>
+	>
