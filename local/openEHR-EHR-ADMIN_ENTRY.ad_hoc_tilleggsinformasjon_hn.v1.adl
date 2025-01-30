@@ -1,0 +1,64 @@
+archetype (adl_version=1.4; uid=21605e12-691e-46fb-8924-65fd07856ff8)
+	openEHR-EHR-ADMIN_ENTRY.ad_hoc_tilleggsinformasjon_hn.v1
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::nb]>
+
+description
+	original_author = <
+		["date"] = <"2025-01-30">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"a7bb503710b8d467fcdf3bf8000751ab">
+		["build_uid"] = <"41ba9e02-9203-3eea-bb51-c89de5c65e7a">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- ad_hoc_tilleggsinformasjon_hn
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Sett inn tilleggsspørsmål her
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"ad_hoc_tilleggsinformasjon_hn">
+					description = <"Ad_hoc_tilleggsinformasjon_hn">
+					comment = <"Tilleggsspørsmål i pasientskjema som ikke har noen verdi for gjenbruk eller rapport/statistikker, f.eks \"skriv inn telefonnummer du ønsker å bli kontakter på\". ">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Sett inn tilleggsspørsmål her">
+					description = <"Diverse spørsmål som det ikke skal hentes ut rapporter på, f.eks \"Har du noen annen informasjon som er viktig\" eller \"Har du et annet telefonnummer vi skal bruke for å nå deg?\"">
+				>
+			>
+		>
+	>
