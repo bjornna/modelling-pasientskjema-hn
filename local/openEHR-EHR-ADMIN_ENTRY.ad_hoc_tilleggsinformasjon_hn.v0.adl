@@ -23,7 +23,7 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"855589462073381cf7f8650b2a739a8e">
+		["MD5-CAM-1.0.1"] = <"c2577a5469db345809b80b0dab5d0db6">
 		["build_uid"] = <"41ba9e02-9203-3eea-bb51-c89de5c65e7a">
 	>
 
@@ -49,6 +49,7 @@ ontology
 				["at0000"] = <
 					text = <"Ad_hoc_tilleggsinformasjon_hn">
 					description = <"Ad_hoc_tilleggsinformasjon_hn">
+					comment = <"Tilleggsspørsmål i pasientskjema som ikke har noen verdi for gjenbruk eller rapport/statistikker, f.eks \"skriv inn telefonnummer du ønsker å bli kontakter på\". ">
 				>
 				["at0001"] = <
 					text = <"Item tree">
